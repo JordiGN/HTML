@@ -5,7 +5,15 @@
   <script src="js/jquery-2.1.3.min.js"></script>
   <script>
   $(function(){
-      $.ajax(){}
+      $.ajax({
+        url : "opciones.php",
+        datatype : "json",
+        complete : function(data){
+          alert(data);
+          var info = eval(data);
+          alert(info);
+        }
+      });
   });
 
       function ajx1()
