@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Practica 2</title>
+</head>
+<body>
+	<h2>Captura de datos de alumno</h2>
+	<!--Metodos de envio del formulacio
+	Existen dos metodos de envio de datos:
+	get: El formulatio se envia como parte de la URL.
+	post: El formulario se envia en la seccion de datos de la 
+	petición
+	action es la url a donde se enviaran los datos -->
+	<form method="POST" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+		<label for="ncontrol">No. de Control</label>
+		<input type="password" name="ncontrol" placeholder="No. de Control" required>
+		<br/>
+		<label for="nom" >Nombre:</label>
+		<input type="text" name="nom" placeholder="Escriba su nombre completo" required>
+		<br/>
+		<label for="fnac">Fecha de nacimiento:</label>
+		<input type="date" name="fnac" placeholder="dd/mm/aaaa" title="Fecha de Nacimiento">
+		<br/>
+		<label for="carrera">Carrera</label>
+		<select name="carrera" id="">
+			<option value="1">Ing. Informatica</option>
+			<option value="2">Ing. Sistemas</option>
+			<option value="3">Ing. Software</option>
+		</select>
+		<br/>
+		<label for="turno">Turno</label><br> 
+		<input type="Radio" name="Turno" value="1" checked>Matutino <br/>	
+		<input type="Radio" name="Turno" value="2"checked>Vespertino<br/>
+		
+		<input type="checkbox" name="ss" value="s">Servicio Social <br/>
+		<input type="checkbox" name="Residencia" value="r">Residencia Profesional <br/>
+		
+		<input type="submit" name="enviar" value="Enviar">
+	</form>
+</body>
+</html>

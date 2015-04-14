@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function delNodo(nodo)
+	{
+		nodo.parentNode.parentNode.removeChild(nodo.parentNode);
+	}
+
+	function addNodo()
+		{
+			var texto= document.getElementById('valor').value;
+			var btn =document.createElement('button');
+			btn.innerHTML="Borrar";
+			btn.setAttribute("onclick","delNodo(this);");
+
+			texto+=" ";
+			var li_node=document.createElement('li');
+			var text_node=document.createTextNode(texto);
+			li_node.appendChild(text_node);
+			li_node.appendChild(btn);
+			var lista_ul=document.getElementById('lista');
+			lista_ul.appendChild(li_node);
+			//document.getElementById('lista').appendChild(li_node);
+
+		}
+	</script>
+</head>
+<body>
+	<h2>Listas UL dinamica</h2>
+	<ul id="lista"></ul>
+	<input type="text" id="valor">
+	<button onclick="addNodo();">Agrega elemento li</button>
+
+</body>
+</html>

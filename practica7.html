@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	
+	<script>
+	var i = 0;
+	function cambiarColor(color)
+	{
+		document.body.style.backgroundColor= color;
+	}
+
+	function cambiarColorTimer()
+	{
+		/*var listaColor = new Array('blue','green','yellow','red');		
+		document.body.style.backgroundColor = listaColor[i];
+		i++
+		if (i == listaColor.length){i = 0;
+		setTimeout("cambiarColorTimer()", 1000);*/
+
+		var colo=new Array('red','green','blue','yellow');
+	co=Math.round(Math.random()*colo.length);
+	document.body.style.backgroundColor=colo[co];
+	setTimeout('cambiarColorTimer()','500'); // 3000 = 3 segundos
+	}
+	</script>
+</head>
+<body onload="cambiarColorTimer()">
+	<button onclick="cambiarColor('blue')">Fondo azul</button>
+	<button onclick="cambiarColor('red')">Fondo rojo</button>
+	<button onclick="cambiarColor('yellow')">Fondo amarillo</button>
+	<button onclick="cambiarColor('green')">Fondo verde</button>
+
+	
+</body>
+</html>

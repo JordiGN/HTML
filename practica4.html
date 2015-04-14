@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p onmouseover="this.innerHTML='<b>Mouse fuera</b>'" 
+	   onmouseout="this.innerHTML='<i>Mouse arriba</i>'"
+	   >
+	<i>Mouse over this text to change it</i>
+	</p>
+	<div id="d">
+		<p>Este es un parrafo</p>
+		<p>Este es otro parrafo xD hahahaha</p>
+	</div>
+	<script type="text/javascript">
+	var d=document.getElementById('d');
+	alert(d.innerHTML);
+	</script>
+</body>
+</html>

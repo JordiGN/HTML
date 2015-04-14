@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function aumenta()
+		{
+			var p1=document.getElementById('p1').style.fontSize;
+			//alert("font-size:"+p1);
+			var t=parseInt(p1.replace("px",""));
+			//alert(t);
+			if (t<22) {
+				t=t+2;
+				document.getElementById('p1').style.fontSize=t+"px";
+			};
+			
+		}
+		function disminuye()
+		{
+			var p1=document.getElementById('p1').style.fontSize;
+			//alert("font-size:"+p1);
+			var t=parseInt(p1.replace("px",""));
+			//alert(t);
+			if (t>14) {
+				t=t-2;
+				document.getElementById('p1').style.fontSize=t+"px";
+			};
+		}
+
+		function mayusculas()
+		{
+			var p1=document.getElementById('p1').innerText;
+			//alert(p1);
+			p1=p1.toUpperCase();
+			//alert(p1);
+			document.getElementById('p1').innerText=p1;
+		}
+		function minusculas()
+		{
+			var p1=document.getElementById('p1').innerText;
+			//alert(p1);
+			p1=p1.toLowerCase();
+			//alert(p1);
+			document.getElementById('p1').innerText=p1;
+			
+			
+		}
+		function buscar()
+		{
+			var palabra=document.getElementById('texto').value;
+			var p1=document.getElementById('p1').innerText;
+			//alert(palabra);
+			var cadena=p1.search(palabra);
+			//alert(cadena);
+			
+			if (cadena>=0) {
+				alert(palabra+'Palabra encontrada en la posición' +cadena);
+				cambia(p1,palabra);
+			}
+			else
+				{
+					alert(palabra+'Palabra no encontrada');
+				document.getElementById('resultado').innerHTML='No encontrado';
+				}
+		}
+		function cambia(texto,subcadena)
+		{
+			texto=texto.split(subcadena).join("<span class='bkRed'>"+subcadena+"</span>");
+			document.getElementById('p1').innerHTML=texto;
+		}
+
+	</script>
+	<style>
+		.bkRed
+		{
+			background-color: yellow;
+		}
+	</style>
+
+</head>
+<body>
+	<p id="p1" style="font-size:14px"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ducimus dolor, quis nesciunt facere doloremque, maiores illum vel numquam impedit similique quo officia cupiditate voluptates voluptate, deserunt ex ea aliquam.</span>
+	<span>Fugit consectetur explicabo veniam perspiciatis sequi sapiente, ab voluptatem cum, nostrum sed fugiat eaque aliquam totam maxime mollitia et minima aliquid ipsum. Similique nesciunt, temporibus aperiam, iusto minus exercitationem eveniet!</span>
+	<span>Fuga eveniet, similique nihil excepturi. Voluptate minima perspiciatis, esse cumque quas voluptatum natus quos iste tempora alias, nemo nam labore iusto laborum sapiente doloribus aliquam at! Nulla officiis commodi animi!</span>
+	<span>Non repellendus doloribus, maiores deserunt voluptate minus aliquam, sequi consequuntur nam. Ut fugit sint vero odio vel dolorum sit, itaque non recusandae delectus illo molestiae blanditiis magnam ab, quaerat tenetur?</span>
+	<span>Beatae a eaque ratione accusamus corrupti quod sapiente, cupiditate modi reiciendis eum officia debitis similique hic autem neque distinctio maxime sequi architecto corporis quis suscipit. Explicabo iusto mollitia, maiores consectetur!</span>
+	</p>
+	<button onclick="aumenta()">+</button>
+	<button onclick="disminuye()">-</button>
+	<button onclick="mayusculas()">Mayusculas</button>
+	<button onclick="minusculas()">Minusculas</button>
+	<input type="" id="texto">
+	<button onclick="buscar()">Buscar</button>
+	<span id="resultado"></span>
+</body>
+</html>

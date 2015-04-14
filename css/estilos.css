@@ -1,0 +1,106 @@
+#wrapper
+{
+	width: 900px;
+	height: 100%;
+	background-color: yellow;
+	margin: auto auto;
+	/* 
+em (escalas) es adaptativo y cuida mucho las proporciones
+px son los pixeles que se le da de tamnaio
+*/
+}
+
+#wrapper>header/*Que el elemento sea hijo directo del elemento anterior*/
+{
+	width: 100%;
+	height: 150px;
+	background-color: blue;
+	background-image: url("../img/HolaIMG.jpg");
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: 10px 10px;
+}
+
+#wrapper>footer
+{
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+	background-color: gray;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Mi Fuente2';
+}
+body
+{
+	background-color: black;
+}
+
+nav ul
+{
+	list-style: none;
+}
+
+nav ul a
+{
+	text-decoration: none;
+}
+
+nav ul li
+{
+	display: inline;
+}
+
+nav ul li a:hover
+{
+	background-color: blue;
+	color: white;
+}
+
+nav ul li a
+{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+body
+{
+	font-family: "Mi Fuente",Georgia,Serif;
+	font-size: 14px;
+}
+@font-face{
+	font-family: "Mi fuente";
+	src:url('../fonts/Lobster-Regular.ttf');
+}
+
+@font-face{
+	font-family: "Mi fuente2";
+	src:url('../fonts/Monserrat-Bold.ttf');
+}
+
+.uno p
+{
+display: inline;
+width: 286px;
+border: 2px dotted cyan;
+text-align: justify;
+}
+#pizq
+{
+float: left;
+margin-left: 5px;
+margin-right: 12px;
+}
+#pder
+{
+float: right;
+margin-left: 0px;
+margin-right: 2px;
+}
+#pcent
+{
+float: left;
+margin-left: 0px;
+margin-right: 5px;
+}

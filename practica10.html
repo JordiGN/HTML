@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba de imagen</title>
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script>
+  $(function(){
+
+    $('#img1').click(function(){
+      $('#img1').attr('src','img/imagen_naranja.jpg');
+    });
+    $('#img1').mouseenter(function(){
+      $('#img1').attr('src','img/imagen_naranja.jpg');
+    });
+    $('#img1').mouseleave(function(){
+      $('#img1').attr('src','img/imagen_gris.jpg');
+    });
+
+  });
+
+</script>
+</head>
+
+<body>
+  <img id="img1" src="img/imagen_gris.jpg" alt="">
+</body>
+</html>
