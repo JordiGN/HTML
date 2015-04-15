@@ -4,17 +4,21 @@
   <title> </title>
   <script src="js/jquery-2.1.3.min.js"></script>
   <script>
-  $(function(){
+
+
+
       $.ajax({
-        url : "opciones.php",
-        datatype : "json",
-        complete : function(data){
-          alert(data);
-          var info = eval(data);
-          alert(info);
-        }
-      });
-  });
+          url : "opciones.php",
+          dataType : "json",
+          success : function(data){
+            data.forEach(function(x)
+            {
+              //alert("entro");
+              var opcion="<option value='"+x.Id+"'>"+x.nombre+"</option>";
+              $('#colonia').append(opcion);
+            });
+          }
+        });
 
       function ajx1()
       {
@@ -42,12 +46,9 @@
 </head>
 <body>
     nombre:
-
-    <input type="text" name="nom" id="nom" placeholder="Nombre">
-
-    <select name="" id="colonia">
-
-    </select>
+    <input type="text" name="nom" id="nom" placeholder="Nombre"></br>
+    </br>
+    colonia:<select id="colonia"></select>
 
     <button id="btn1" onclick="ajx1();">Saludo</button>
     <button id="btn2" onclick="">Confirmar datos enviados </button>
