@@ -5,20 +5,27 @@
   <script src="js/jquery-2.1.3.min.js"></script>
   <script>
 
-
-
-      $.ajax({
-          url : "opciones.php",
-          dataType : "json",
-          success : function(data){
-            data.forEach(function(x)
-            {
-              //alert("entro");
+  //   $.ajax({
+//       url : "opciones.php",
+//       dataType : "json",
+//       success : function(data){
+//         data.forEach(function(x)
+//         {
+//           //alert("entro");
+//           var opcion="<option value='"+x.Id+"'>"+x.nombre+"</option>";
+//           $('#colonia').append(opcion);
+//         });
+//       }
+//     });
+//
+      $.getJSON("opciones.php",
+          function(data){
+            data.forEach(function(x){
               var opcion="<option value='"+x.Id+"'>"+x.nombre+"</option>";
               $('#colonia').append(opcion);
             });
           }
-        });
+        );
 
       function ajx1()
       {
