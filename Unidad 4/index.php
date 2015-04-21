@@ -12,11 +12,11 @@
   </header>
   <nav>
     <ul>
-      <li><a href=" ">Alta agenda</a></li>
-      <li><a href=" ">Consulta agenda</a></li>
+      <li><a onclick="carga('alta_agenda.php');">Alta agenda</a></li>
+      <li><a onclick="carga('consulta_agenda.php');">Consulta agenda</a></li>
     </ul>
   </nav>
-  <section>
+  <section id='contenido'>
 
   </section>
   <footer>
