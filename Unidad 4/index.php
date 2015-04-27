@@ -12,7 +12,8 @@
   <header>
     <h1>Agenda telefónica</h1>
   </header>
-  <nav>
+  <div id="maindiv">
+    <nav>
     <ul>
       <li><a onclick="carga('alta_agenda.php');">Alta agenda</a></li>
       <li><a onclick="carga('consulta_agenda.php');">Consulta agenda</a></li>
@@ -21,6 +22,8 @@
   <section id='contenido'>
 
   </section>
+
+  </div>
   <footer>
 
   </footer>

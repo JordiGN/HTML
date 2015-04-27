@@ -1,5 +1,5 @@
 <h1 id="tit1">Consulta contactos</h1>
-<form action="" method="POST" id="frm1">
+<form id="frmconsulta" action="" method="POST" id="frm1">
     <label class="etq" for="nombre">Nombre:</label><br>
         <input type="text" name="nombre" id="nombre" placeholder="nombre de contacto"><br>
     <label class="etq" for="tel1">Telefono1:</label><br>

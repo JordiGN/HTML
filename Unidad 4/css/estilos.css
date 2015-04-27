@@ -1,5 +1,21 @@
 body
 {
   background-color: gray;
+}
+
+#maindiv{
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: black;
+  color: red;
+}
+
+#frm1{
+  color: yellow;
+  text-align: center;
+}
+
+#frmconsulta{
+  color: blue;
   text-align: center;
 }
