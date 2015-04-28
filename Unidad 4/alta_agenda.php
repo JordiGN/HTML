@@ -11,3 +11,9 @@
     <button type="button" onclick="limpia();">Salir</button>
  </form>
 
+<script>
+    eval($("#fnac").mask("99/99/9999",{placeholder:"dd/mm/yyyy"}));
+    eval($("#tel1").mask("(999)-99-999-99",{placeholder:"(999)-99-999-99"}));
+    eval($("#tel2").mask("(999)-99-999-99",{placeholder:"(999)-99-999-99"}));
+</script>
+
