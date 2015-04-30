@@ -8,29 +8,40 @@ function carga(item)
   });
 }
 
-function envia()
+function envia(opc)
 {
+  if (opc==2) {
+    url: $('#frm1').attr('action','eliminarContacto.php');
+  };
   $.ajax({
     type : 'POST',
     url: $('#frm1').attr('action'),
     data: $('#frm1').serialize(),
     success:function(data)
     {
-      alert('Contacto Guardado');
-      $('#frm1')[0].reset();
+      alert(data);
+      if (opc==0) {
+        $('#frm1')[0].reset();
+      }else{
+        carga('consulta_agenda.php');
+      }
     }
   });
 }
  function limpia()
  {
     $('#contenido').html('');
+    $('#contenido').hide;
+
  }
 
 function conf_editar()
 {
   $("#tit1").html("Editar contacto");
   $("#btneditar").hide();
+  $("#btneliminar").hide();
   $("#btnguardar").show();
+  $("#btneliminar").show();
   $("#nombre").autocomplete({
     disabled:true
   });
@@ -42,4 +53,9 @@ function conf_editar()
   $("#tel2").removeAttr("disabled");
   $("#email").removeAttr("disabled");
   $("#fnac").removeAttr("disabled");
+}
+
+function eliminar()
+{
+
 }

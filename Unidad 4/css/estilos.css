@@ -6,7 +6,7 @@ body
 #maindiv{
   padding-left: 50px;
   padding-right: 50px;
-  background-color: black;
+  background-color: green;
   color: red;
 }
 
@@ -18,4 +18,7 @@ body
 #frmconsulta{
   color: blue;
   text-align: center;
+}
+#btnguardar, #btneliminar{
+
 }

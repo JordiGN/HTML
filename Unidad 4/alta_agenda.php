@@ -7,7 +7,7 @@
     Telefono2: <input type="text" name="tel2" id="tel2" placeholder="Telefono2 de Contacto"><br>
     Correo_electronico: <input type="text" name="email" id="email" placeholder="Correo electronico de Contacto"><br>
     Fecha_de_nacimiento: <input type="text" name="fnac" id="fnac" placeholder="Fecha de nacimiento de Contacto"><br>
-    <button type="button" onclick="envia();">Guardar contacto</button>
+    <button type="button" onclick="envia(0);">Guardar contacto</button>
     <button type="button" onclick="limpia();">Salir</button>
  </form>
 
